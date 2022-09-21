@@ -18,18 +18,18 @@ namespace Lesson08_03
         }
         public bool IsRectangleLogic(Point topLeft, Point bottomRight)
         {
-            if (((topLeft.X > bottomRight.X) && (topLeft.Y > bottomRight.Y)) || ((topLeft.X > bottomRight.X) || (topLeft.Y > bottomRight.Y)))
+            if ((topLeft.X < bottomRight.X) && (topLeft.Y > bottomRight.Y))
             {
-                return true;
+                return false;
             }
             else
             {
-                return false;
+                return true;
             }
         }
         public void IsPointInRectangle(Point topLeft, Point bottomRight, Point inputPoint)
         {
-            if (topLeft.X <= inputPoint.X && topLeft.Y <= inputPoint.Y && bottomRight.X >= inputPoint.X && bottomRight.Y >= inputPoint.Y)
+            if (topLeft.X <= inputPoint.X && topLeft.Y >= inputPoint.Y && bottomRight.X >= inputPoint.X && bottomRight.Y <= inputPoint.Y)
             {
                 Console.WriteLine("Nurodyto taško koordinatės YRA stačiakampyje");
             }
